@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Conscientização</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="/img/ChatGPT Image 11 de set. de 2025, 09_52_27.png" alt="Logo" class="logo">
+        <nav>
+            <a href="/sobre.html">Sobre nós</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Conscientização<br>é o primeiro passo</h1>
+                <p>
+                    Projeto com objetivo em conscientizar os jovens<br>
+                    sobre o ato de consumir excessivamente
+                </p>
+            </div>
+
+
+        </section>
+        <a href="#projeto" class="btn btn-fixo">Conheça o projeto</a>
+
+    </main>
+
+
+    <!-- Seção O Projeto -->
+    <section id="projeto">
+        <h2>O que é o projeto + Administração - Consumismo?</h2>
+
+        <div class="cards">
+            <div class="card">
+               
+                <h3>Quem criou</h3>
+                <p>O projeto consumismo financeiro foi criado por seis integrantes da
+                    Etec de Cidade Tiradentes, cursando o ensino médio com habilitação técnica em Administração com
+                    objetivo de obtenção de nota na matéria projeto integrador. </p>
+            </div>
+
+            <div class="card">
+                
+                <h3>Problema</h3>
+                <p> Nosso projeto aborda sobre como o consumismo excessivo e desnecessário está presente na vida das
+                    pessoas e principalmente dos adolescentes com a influência do marketing digital, causando
+                    consequências financeiramente tanto atualmente quanto no futuro. </p>
+            </div>
+
+            <div class="card">
+               
+                <h3>Objetivo</h3>
+                <p>Temos o objetivo de conscientizar as pessoas sobre o ato de consumir em excesso mostrando possíveis
+                    soluções que podem ser aplicadas no dia a dia para evitar essa ação</p>
+            </div>
+        </div>
+    </section>
+    <!--Oq é o consumismo-->
+    <section id="oque">
+        <h2>Entendendo o que é consumismo</h2>
+        <div class="cards">
+            <div class="card">
+               
+                <h3>Definição</h3>
+                <p>Consumismo é o desejo excessivo de comprar e acumular bens, indo além do consumo necessário. Enquanto
+                    consumir atende a necessidades, o consumismo caracteriza-se pelo excesso e pelo apego material,
+                    sendo uma marca da sociedade contemporânea.</p>
+            </div>
+
+            <div class="card">
+               
+                <h3>Impactos Negativos</h3>
+                <p>O consumismo pode levar a problemas financeiros, endividamento, desperdício de recursos naturais e
+                    impactos ambientais negativos devido à produção em massa e descarte inadequado de produtos.</p>
+            </div>
+
+            <div class="card">
+              
+                <h3>Alternativas</h3>
+                <p>Para combater o consumismo, é importante adotar práticas como consumo consciente, reciclagem,
+                    reutilização de produtos e valorização de experiências em vez de bens materiais.</p>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const btn = document.querySelector('.btn-fixo');
+                const projeto = document.getElementById('projeto');
+
+                function checkProjetoVisible() {
+                    const rect = projeto.getBoundingClientRect();
+                    // Verifica se pelo menos metade da seção está visível
+                    const metadeProjeto = rect.top + rect.height / 2;
+                    if (metadeProjeto <= window.innerHeight && rect.bottom >= 0) {
+                        btn.style.display = 'none';
+                    } else {
+                        btn.style.display = 'flex';
+                    }
+                }
+
+                window.addEventListener('scroll', checkProjetoVisible);
+                btn.addEventListener('click', function () {
+                    setTimeout(checkProjetoVisible, 700);
+                });
+
+                // Garante o estado correto ao carregar a página
+                checkProjetoVisible();
+            });
+        </script>
+</body>
+
+</html>

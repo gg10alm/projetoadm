@@ -1,0 +1,156 @@
+/* Corpo e cabeçalho */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #1c88e0 0%, #055583 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #1c88e0;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+   
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Seção Sobre Nós */
+.sobre {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.sobre h1 {
+   font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Move o título mais para cima */
+    color: #ffffff;
+}
+
+.biografia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    justify-content: center;
+}
+
+.membro {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.membro img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 140, 255, 0.61);
+}
+
+.membro h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #1c88e0;
+}
+
+.membro p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+.voltar {
+    display: inline-block;
+    position: absolute; /* Remove a seta do fluxo normal */
+    top: 10px; /* Posiciona a seta no topo */
+    left: 20px; /* Posiciona a seta à esquerda */
+    padding: 10px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .biografia {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+
+    .membro img {
+        width: 100px;
+        height: 100px; /* Ajusta tamanho das imagens */
+    }
+
+    .membro h2 {
+        font-size: 1.1rem; /* Reduz tamanho do título */
+    }
+
+    .membro p {
+        font-size: 0.9rem; /* Reduz tamanho do texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .biografia {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+
+    .membro {
+        padding: 15px; /* Reduz o padding */
+    }
+
+    .membro img {
+        width: 90px;
+        height: 90px; /* Ajusta tamanho das imagens */
+    }
+
+    .membro h2 {
+        font-size: 1rem; /* Reduz tamanho do título */
+    }
+
+    .membro p {
+        font-size: 0.85rem; /* Reduz tamanho do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .membro img {
+        width: 80px;
+        height: 80px; /* Ajusta tamanho das imagens */
+    }
+
+    .membro h2 {
+        font-size: 0.95rem; /* Reduz tamanho do título */
+    }
+
+    .membro p {
+        font-size: 0.8rem; /* Reduz tamanho do texto */
+    }
+}
